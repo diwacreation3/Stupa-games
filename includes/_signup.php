@@ -113,7 +113,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($stmt->execute()) {
                 // Rediect to login page 
-                header("Location: login.php");
+                header("Location: signin.php");
             } else {
                 echo "Opps! something went wrong. please try again later ";
             }

@@ -32,12 +32,7 @@ require "../includes/_signup.php";
           <label for="password">Password</label>
           <input type="password"  id="password" name="password" placeholder="Enter password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
           <span class="invalid-feedback"><?php echo $password_err; ?></span>
-          <!-- <span class="input-group-append flex">
-                  <!-- <button id="togglePassword" type="button" class="btn btn-outline-secondary">
-                    <i class="bi bi-eye-slash"></i>
-                  </button> --
-                  <input type="checkbox" id="togglepassword" name="toggle" > show Password <br>
-                </span>  -->
+          
         </div>
         <div class="form-group">
           <label for="password">Confirm Password</label>
@@ -47,7 +42,7 @@ require "../includes/_signup.php";
         
         <br>
         <button type="submit" name="submit" class="btn btn-primary">Sign Up</button> <br>
-        Already have an account <a href="login.html">Login</a>
+        Already have an account <a href="signin.php">Login</a>
       </form>
     </div>
   </div>
