@@ -1,0 +1,6 @@
+
+# ignore files inside static
+static/
+
+# ignore file inside assets
+assets/
