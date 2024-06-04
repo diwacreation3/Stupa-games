@@ -37,7 +37,7 @@ if (!empty($login_err)) {
                 </div>
                 <br>
                 <button type="submit" name="submit" class="btn btn-primary">Sign In</button> <br>
-                Don't have account <a href="signup.html">Create account</a>
+                Don't have account <a href="signup.php">Create account</a>
             </form>
         </div>
     </div>

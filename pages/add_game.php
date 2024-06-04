@@ -1,8 +1,20 @@
 <?php
 require "../includes/_add_game.php";
-
+require "../includes/_paths.php";
+require "widgets/header.php";
+require "widgets/footer.php";
+include "init_session.php";
+include "../includes/_file_logic.php";
 ?>
 
+<?php
+
+function user_session()
+{
+  return ($_SESSION["username"]);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,37 +26,8 @@ require "../includes/_add_game.php";
   
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Admin Panel</a>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <!-- <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
-              </li> -->
-              <li class="nav-item">
-                <a class="nav-link" href="#">Users</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Games</a>
-              </li>
-            </ul>
-            
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  John Doe (username)
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Profile</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Logout</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+    <?php $username = $_SESSION["username"]; ?>
+   <?php nav_header($logo_path, $manage_games, $add_game, $username) ?>
 
   <div class="container">
     <div class="card w-75">
@@ -73,23 +56,21 @@ require "../includes/_add_game.php";
             </select>
           </div>
           <div class="form-group mb-3">
-            <label for="banner_image" class="form-label">Game Icon</label>
-            <input type="file" class="form-control" id="game_icon" name="game_icon">
-          </div>
-          <div class="form-group mb-3">
             <label for="banner_image" class="form-label">Banner Image</label>
             <input type="file" class="form-control" id="banner_image" name="banner_image">
           </div>
           <div class="form-group mb-3">
             <label for="game_file" class="form-label">Game File</label>
             <input type="file" class="form-control" id="game_file" name="game_file">
+            <input type="hidden" name="current_user" value="<?php echo $username ?>">
           </div>
+          
           <button type="submit" class="btn btn-primary">Upload Game</button>
         </form>
       </div>
     </div>
   </div>
-
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
