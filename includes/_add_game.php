@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else{
         $binaryName = basename($_FILES["game_file"]["name"]);
 
-        $_user_binary_path = "$_data_path/$_binary_path";
+        $_user_binary_path = "$_data_path/$_binary_path/";
         $targetBinaryPath = $_user_binary_path . $binaryName;
         $binaryType = pathinfo($targetBinaryPath, PATHINFO_EXTENSION);
 

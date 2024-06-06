@@ -38,11 +38,11 @@ include "init_session.php";
                 $current_user = $row['username'];
                 if($current_user == $username)
                 {
-
+                  $banner_url = $row['banner_path'];
                 
         ?> 
     <div class="game-card">
-      <img src="../assets/img.png" alt="Game Image">
+      <img src="<?php echo $banner_url ?>" alt="Game Image">
       <div class="game-info">
         <h4><?php echo $row['game_name']; ?></h4>
         <p>Uploaded by: <?php echo $row['username']; ?></p>

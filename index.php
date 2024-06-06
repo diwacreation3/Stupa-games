@@ -48,16 +48,16 @@
             <div class="row">
             <?php
                 $sql = "SELECT * FROM gamedetail";
-                $img_sql = "SELECT * FROM image_detail";
                 $result = $mysqli->query($sql);
-                $img_result = $mysqli->query($img_sql);
                 
                 if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
+                    $banner_url = $row["banner_path"];
+                    echo trim($banner_url, "./");
         ?> 
                 <div class="col-6">
                     <div class="card">
-                        <img class="card-img-top" src="assets/img.png" alt="Title" />
+                        <img class="card-img-top" src="<?php echo trim($banner_url, "./") ?>" alt="Banner_image" />
                         <div class="card-body">
                             <h4 class="card-title"><?php echo $row['game_name']; ?></h4>
                             <p class="card-text"><?php echo $row['game_desc']; ?></p>
