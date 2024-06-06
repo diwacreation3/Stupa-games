@@ -4,7 +4,7 @@ function nav_header($logo_path, $manage_game,  $add_game, $username)
 {
     echo <<<EOT
         <header>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+        <nav class="navbar navbar-expand-sm ">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
           <img src = "$logo_path" height= "40px" width="45px">

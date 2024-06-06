@@ -13,7 +13,7 @@ function footer_bar($developer)
 function index_footer_bar($developer)
 {
     echo <<<EOT
-        <footer class="footer ">
+        <footer class="footer  ">
          <p class="footer-detail"> &copy <span id = "getCurrentYear"> </span>  | Developed with &#10084; by $developer  </p>
          <script> document.getElementById("getCurrentYear").innerHTML = new Date().getFullYear(); </script>
         </footer>
