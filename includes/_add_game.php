@@ -45,6 +45,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $_db_img_Ustatus = false;
     $_db_binary_Ustatus = false;
 
+
+    // Someone fix this upload issue
+    // it upload into folder if other file got error during upload
     // check image
     if(empty($_FILES["banner_img"]["name"]))
     {
