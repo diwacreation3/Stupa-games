@@ -1,9 +1,8 @@
 <?php
-require "../includes/_add_game.php";
+require "../includes/_add_game_file.php";
 require "widgets/header.php";
 require "widgets/footer.php";
-require "../includes/_paths.php";
-require "init_session.php"
+
 ;?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,39 +21,34 @@ require "init_session.php"
   <div class="container">
     <div class="card w-75">
       <div class="card-header">
-        <h3>Add New Game</h3>
+        <h3>Add Game file</h3>
       </div>
       <div class="card-body">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
-          <div class="form-group mb-3">
+          <!-- <div class="form-group mb-3">
             <label for="game_name" class="form-label">Game Name</label>
-            <input type="text"  id="game_name" name="game_name" placeholder="Enter game name" class="form-control <?php echo (!empty($GameName_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $GameName; ?>">
-            <span class="invalid-feedback"><?php echo $GameName_err; ?></span>
-          </div>
+            <input type="text"  id="game_name" name="game_name" placeholder="Enter game name"  class="form-control" readonly value="rdr2">
+          </div> -->
+           <!--
           <div class="form-group mb-3">
             <label for="game_description" class="form-label">Game Description</label>
-            <textarea id="game_description" name="game_description" rows="3" placeholder="Enter game description" class="form-control <?php echo (!empty($GameDesc_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $GameDesc; ?>"></textarea>
-            <span class="invalid-feedback"><?php echo $GameDesc_err; ?></span>
+            <textarea id="game_description" name="game_description" rows="3" placeholder="Enter game description" class="form-control " readonly value = "ome game detail text" ></textarea>
+            <span class="invalid-feedback"><?//php echo $GameDesc_err; ?></span>
           </div>
           <div class="form-group mb-3">
             <label for="platform" class="form-label">Platform</label>
-            <select class="form-select" id="platform" name="platform">
-              
-              <option value="windows">Windows</option>
-              <option value="android">Android</option>
-              <option value="web">Web</option>
-            </select>
-          </div>
+            <input type="text" name="platform" id="platfrom" class="form-control" readonly value = " windows">
+          </div> -->
            <div class="form-group mb-3">
             <label for="banner_image" class="form-label">Banner Image</label>
             <input type="file" class="form-control" id="banner_img" name="banner_img">
           </div> 
-          < <div class="form-group mb-3">
+           <div class="form-group mb-3">
             <label for="game_file" class="form-label">Game File</label>
             <input type="file" class="form-control" id="game_file" name="game_file">
-          </div>
-          <input type="hidden" name="current_user" value="<?php echo $username ?>">
-          <button type="submit" class="btn btn-primary">Submit Game detail</button>
+          </div> 
+    
+          <button type="submit" class="btn btn-primary">Submit Game File</button>
         </form>
       </div>
     </div>

@@ -7,6 +7,7 @@ require "../config/db_config.php";
 $GameName  = $platform = $GameDesc = $user = "";
 $GameName_err = $GameDesc_err = $platform_err  = "";
 
+
 //game name description and platform detail into database 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // check if game name is empty 
@@ -29,9 +30,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $platform = $_POST["platform"];
     }
+     // set user variable from user session name
     $user = $_POST["current_user"];
 
-    // set user variable from user session name 
+    // shitty file logic it took fucking one day 
+
+
 
 
     // check input error before inserting in database 
@@ -58,8 +62,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($stmt->execute()) {
                 // echo msg 
-                echo "Data added sucessfully";
-                header("Location: admin.php");
+                // echo "Data added sucessfully";
+                header("Location: index.php");
             } else {
                 echo "Opps! something went wrong";
             }
@@ -67,47 +71,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-    // handle game icon 
-    // File upload directory 
-    $statusMsg = "";
-//     $_path = "users";
-// $_user_path = "diwacreation3";
-// $username = "./{$_path}/{$_user_path}";
-// mkdir($username, 0777,true);
-    
-    $targetDir = "uploads/";
+   
 
-    if (isset($_POST["submit"])) {
-        if (!empty($_FILES["file"]["name"])) {
-            $fileName = basename($_FILES["file"]["name"]);
-            $targetFilePath = $targetDir . $fileName;
-            $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
-
-            // Allow certain file formats 
-            $allowTypes = array('jpg', 'png', 'jpeg');
-            if (in_array($fileType, $allowTypes)) {
-                // Upload file to server 
-                if (move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)) {
-                    // Insert image file name into database 
-                    $insert = $db->query("INSERT INTO images (file_name, uploaded_on, img_path) VALUES ('" . $fileName . "' , NOW(),'$targetFilePath' )  ");
-                    if ($insert) {
-                        $statusMsg = "The file " . $fileName . " has been uploaded successfully.";
-                    } else {
-                        $statusMsg = "File upload failed, please try again.";
-                    }
-                } else {
-                    $statusMsg = "Sorry, there was an error uploading your file.";
-                }
-            } else {
-                $statusMsg = 'Sorry, only JPG, JPEG, PNG, & GIF files are allowed to upload.';
-            }
-        } else {
-            $statusMsg = 'Please select a file to upload.';
-        }
-    }
-
-    // Display status message 
-    echo $statusMsg;
 
     //close connection 
     $mysqli->close();
