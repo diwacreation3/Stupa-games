@@ -3,7 +3,7 @@
 static/
 
 # ignore file inside assets
-assets/
+
 #ignore
 sql/
 scripts/
