@@ -1,0 +1,41 @@
+.game-card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+  }
+  
+  .game-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* Maintain aspect ratio and cover */
+    margin-right: 15px;
+    border-radius: 20px;
+  }
+  
+  .game-info {
+    flex: 1; /* Allow remaining space to content */
+  }
+  
+  .platform-icons {
+    display: flex;
+    flex-wrap: wrap; /* Allow icons to wrap on smaller screens */
+    margin-top: 5px;
+  }
+  
+  .platform-icons i {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+
+a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+} 
+
+a:hover{
+  color: #fff;
+  
+}
