@@ -61,6 +61,7 @@
                         <div class="card-body">
                             <h4 class="card-title"><?php echo $row['game_name']; ?></h4>
                             <p class="card-text"><?php echo $row['game_desc']; ?></p>
+                            <p> <?php echo "Developer: ", $row['username'] ?></p>
                             <a href="#" class="btn btn-primary">Download</a> <br> <br>
                             <div class="platform-icons">
                                <?php $platform_code = $row['platform']; ?>

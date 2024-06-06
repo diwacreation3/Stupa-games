@@ -3,8 +3,7 @@ require "../includes/_add_game.php";
 require "widgets/header.php";
 require "widgets/footer.php";
 require "../includes/_paths.php";
-require "init_session.php"
-;?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,11 +46,13 @@ require "init_session.php"
           </div>
            <div class="form-group mb-3">
             <label for="banner_image" class="form-label">Banner Image</label>
-            <input type="file" class="form-control" id="banner_img" name="banner_img">
+            <input type="file"  id="banner_img" name="banner_img" class="form-control <?php echo (!empty($img_name_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $img_name; ?>">
+            <span class="invalid-feedback"><?php echo $img_name_err; ?></span>
           </div> 
-          < <div class="form-group mb-3">
+           <div class="form-group mb-3">
             <label for="game_file" class="form-label">Game File</label>
-            <input type="file" class="form-control" id="game_file" name="game_file">
+            <input type="file"  id="game_file" name="game_file" class="form-control <?php echo (!empty($binary_name_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $binary_name; ?>">
+            <span class="invalid-feedback"><?php echo $binary_name_err; ?></span>
           </div>
           <input type="hidden" name="current_user" value="<?php echo $username ?>">
           <button type="submit" class="btn btn-primary">Submit Game detail</button>
