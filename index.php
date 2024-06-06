@@ -53,16 +53,19 @@
                 if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     $banner_url = $row["banner_path"];
-                    echo trim($banner_url, "./");
+                    $binary_url = $row["binary_path"];
+                   
         ?> 
                 <div class="col-6">
                     <div class="card">
-                        <img class="card-img-top" src="<?php echo trim($banner_url, "./") ?>" alt="Banner_image" />
+                        <img class="card-img-top" src="<?php echo trim($banner_url, "./") ?>" height="300px" width="auto" alt="Banner_image" />
                         <div class="card-body">
                             <h4 class="card-title"><?php echo $row['game_name']; ?></h4>
                             <p class="card-text"><?php echo $row['game_desc']; ?></p>
                             <p> <?php echo "Developer: ", $row['username'] ?></p>
-                            <a href="#" class="btn btn-primary">Download</a> <br> <br>
+                            <p> <?php  echo "Downloads:", $row['downloads']?></p>
+
+                            <a href="pages/download_manager.php?id=<?php echo $row['game_id']; ?>" class="btn btn-primary">Download </a> <br> <br>
                             <div class="platform-icons">
                                <?php $platform_code = $row['platform']; ?>
                                <?php check_platform($platform_code); ?>
