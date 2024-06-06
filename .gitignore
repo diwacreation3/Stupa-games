@@ -12,3 +12,5 @@ data/
 
 
 ## ignore unused file 
+add_game_file.php
+_add_game_file.php
