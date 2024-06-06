@@ -53,7 +53,7 @@ include "init_session.php";
         <?php check_platform($platform_code); ?>
         </div>
         <!-- <button type="button" class="btn btn-primary mt-2"> <a href="update_game.php?id=" "> Update Game</a></button>   -->
-        <button type="button" class="btn btn-danger mt-2"> <a href="delete_game.php?id=<?php echo $row['game_id']; ?>"> Delete Game</a></button>
+        <button type="button" class="btn btn-danger mt-2"> <a href=delete_game.php?id=<?php echo rawurlencode( $row['game_id']) ?>&binary_path=<?php echo rawurlencode($row['binary_path']) ?>&img_path=<?php echo rawurlencode ($row['banner_path']) ?> > Delete Game</a></button>
       </div>
     </div>
   <?php
