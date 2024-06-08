@@ -1,0 +1,85 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.profile-card {
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.profile-card h5 {
+    margin-top: 10px;
+    font-size: 1.25rem;
+}
+
+.profile-card p {
+    margin-bottom: 5px;
+    color: #777;
+}
+
+.reset-button {
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+}
+
+.reset-button:hover {
+    background-color: #0056b3;
+}
+
+.game-image {
+    max-width: 100px;
+    border-radius: 8px;
+}
+
+.delete-button {
+    border-radius: 8px;
+}
+
+.delete-button:hover {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    color: #343a40;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: #343a40;
+    font-weight: bold;
+}
+
+.footer {
+    background: #ffffff;
+    color: #343a40;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer a {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

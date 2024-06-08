@@ -16,6 +16,9 @@ function nav_header($logo_path,  $add_game, )
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                        <a class="nav-link" href="./index.php">Home</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="admin.php">Dashboard</a>
                     </li>
