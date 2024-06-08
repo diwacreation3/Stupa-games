@@ -6,7 +6,6 @@ static/
 
 #ignore
 sql/
-scripts/
 tests/
 data/
 
