@@ -46,6 +46,10 @@ body {
 .delete-button {
     border-radius: 8px;
 }
+.delete-button a{
+    text-decoration: none;
+    color: #fff;
+}
 
 .delete-button:hover {
     background-color: #dc3545;

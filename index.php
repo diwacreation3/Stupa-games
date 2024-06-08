@@ -57,11 +57,10 @@ require "includes/_paths.php";
                    
         ?>
                         <div class="carousel-item <?php echo $active ?>">
-                            <img src="<?php echo trim($banner_url, "./") ?>"  alt="Game Banner 1">
+                            <img src="<?php echo trim($banner_url, "./") ?>"  alt="game_banner">
                             <div class="carousel-caption">
                                 <h2> <?php echo $row['game_name'] ?> </h2>
                                 <p ><?php echo $row['game_desc'] ?> </p>
-                                
                                 <a href="pages/download_manager.php?id=<?php echo $row['game_id']; ?>" class="btn btn-primary play-now-btn">Play Now  <i class="bi bi-play-circle-fill"></i></a>
                             </div>
                         </div>

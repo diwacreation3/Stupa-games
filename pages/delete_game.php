@@ -14,7 +14,7 @@ if (isset($_GET['id'])) {
      $result = $mysqli->query($sql);
      if ($result == TRUE) {
         echo "Record deleted successfully.";
-        header('Location: manage_games.php');
+        header('Location: admin.php');
     }else{
         echo "Error:" . $sql . "<br>" . $mysqli->error;
     }
