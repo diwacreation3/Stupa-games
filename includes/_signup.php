@@ -1,6 +1,7 @@
 <?php
 // Include config file 
 require_once "../config/db_config.php";
+require "_paths.php";
 
 // Define variable and initilize with empty values 
 $email = $username = $password = $confirm_password = "";

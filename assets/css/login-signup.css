@@ -1,0 +1,59 @@
+body {
+    background-color: #f0f4f8;
+}
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+}
+.card {
+    border: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    animation: shadow-pulse 6s infinite alternate;
+}
+@keyframes shadow-pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(46, 245, 1, 0.405);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(111, 18, 241, 0.564);
+    }
+}
+.card-header {
+    background-color: transparent;
+    color: #333;
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+.card-header img {
+    max-width: 100px;
+    background-blend-mode: lighten;
+}
+.form-control {
+    border-radius: 10px;
+    border-color: #dcdcdc;
+    box-shadow: none;
+}
+.btn-primary {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    animation: pulse 1.5s infinite;
+}
+.btn-primary:hover{
+    background-color: #3CCF63;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

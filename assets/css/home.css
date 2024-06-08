@@ -1,0 +1,107 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.nav-item{
+    padding-inline: 16px;
+    
+}
+.row{
+    margin-top: 20px;
+}
+
+.carousel-inner{
+    backdrop-filter: blur(16px);
+    border-radius: 12px;
+    animation: shadow-pulse 6s  infinite alternate-reverse ;
+}
+@keyframes shadow-pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(22, 0, 187, 0.434);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(166, 8, 210, 0.564);
+    }
+}
+.carousel-item {
+    height: 500px ;
+    position: relative;
+}
+
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.carousel-caption {
+    bottom: 20px;
+    left: 20px;
+    text-align: left;
+    background: rgba(90, 132, 255, 0.09);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(96, 194, 255, 0.1);
+    backdrop-filter: blur(7.6px);
+    -webkit-backdrop-filter: blur(7.6px);
+    border: rgba(90, 132, 255, 0.3);
+    padding: 20px;
+    border-radius: 13px;
+}
+
+.carousel-caption h2 {
+    margin: 0;
+    font-weight: 700;
+}
+.carousel-caption p{
+    padding: 10px;
+}
+
+.carousel-caption .play-now-btn {
+    margin-top: 10px;
+}
+
+/* .sidebar {
+    position: absolute;
+    right: 0;
+    top: 70px;
+    width: 200px;
+    padding-top: 10px;
+}
+
+.sidebar .card {
+    margin-bottom: 20px;
+}
+
+.sidebar .card img {
+    height: 100px;
+    object-fit: cover;
+} */
+
+.releases {
+    margin-top: 60px;
+   
+}
+
+.releases .card {
+    margin-bottom: 20px;
+    border-radius: 20px;
+    
+}
+
+.releases .card img {
+    height: 200px;
+    object-fit: cover; 
+    border-radius: 20px 20px 3px 3px ;
+}
+
+.footer {
+    background: rgba(0, 19, 51, 0.6);
+    color: white;
+    padding: 9px 0;
+    text-align: center;
+}

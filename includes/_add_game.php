@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check binary file 
     if(empty($_FILES["game_file"]["name"]))
     {
-        $binary_name_err = "Please select Compressed game file .Zip";
+        $binary_name_err = "Please select executable eg. .exe .apk or compress it on .zip, .rar or .tar";
     } else{
         $binaryName = basename($_FILES["game_file"]["name"]);
 
@@ -91,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $targetBinaryPath = $_user_binary_path . $binaryName;
         $binaryType = pathinfo($targetBinaryPath, PATHINFO_EXTENSION);
 
-        $Binary_allowTypes = array('zip', 'rar','tar', 'exe', 'apk', 'aab' );
+        $Binary_allowTypes = array('zip', 'msi' , 'rar','tar', 'exe', 'apk', 'aab' );
         $binary_check = in_array($binaryType, $Binary_allowTypes);
         if($binary_check)
         {

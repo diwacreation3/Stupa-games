@@ -1,0 +1,110 @@
+
+
+body{
+background-color: #f8f9fa;
+}
+
+.form-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    max-width: 600px;
+}
+
+.form-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-header h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.drag-drop-area {
+    border: 2px dashed #007bff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.drag-drop-area.dragover {
+    border-color: #0056b3;
+}
+
+.drag-drop-area img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.drag-drop-area i {
+    font-size: 2rem;
+    color: #007bff;
+}
+
+.file-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.file-preview i {
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.footer {
+    background: #343a40;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.footer a {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+.loading-animation {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.loading-animation div {
+    width: 10px;
+    height: 10px;
+    background-color: #007bff;
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse 1s ease-in-out infinite;
+    margin: 0 5px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+ /* Add style for red word count */
+ #wordCount {
+    color: black; /* Default color */
+}
+
+#wordCount.overlimit {
+    color: red; /* Red color for overlimit */
+}
