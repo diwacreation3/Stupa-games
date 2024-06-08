@@ -1,10 +1,3 @@
-<?php
-require "config/db_config.php";
-require "pages/widgets/platform.php";
-require "pages/widgets/header.php";
-require "pages/widgets/footer.php";
-require "includes/_paths.php";
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +14,14 @@ require "includes/_paths.php";
 
 <body>
 
-    <?php nav_home_header(trim($logo_path, "./"), $login, $dashboard); ?>
+    <?php 
+    require "config/db_config.php";
+    require "pages/widgets/platform.php";
+    require "pages/widgets/header.php";
+    require "pages/widgets/footer.php";
+    require "includes/_paths.php";
+    nav_home_header(trim($logo_path, "./"), $login, $dashboard); 
+    ?>
 
     <div class="container-fluid">
         <div class="row">
@@ -54,15 +54,15 @@ require "includes/_paths.php";
                         }
                         ?>
 
-                        <a class="carousel-control-prev" href="#bannerCarousel" role="button" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#bannerCarousel" role="button" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </a>
                     </div>
+                    <a class="carousel-control-prev" href="#bannerCarousel" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#bannerCarousel" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -102,14 +102,15 @@ require "includes/_paths.php";
     </div>
 
     <?php home_footer_bar("diwacreation3"); ?>
-
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybOYxBFGbIR6PrIW1giDuoPjlp9Io6G+arjtDgW9uBYD2An4/" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-Qi6LygPvtzF/ABh5y2whIgtCtw4zOZHVWQ1uvUvYjPBMEH9Rcr//a1P1yz6K/7p3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
     <script>
         $(document).ready(function() {
             $('.carousel').carousel({
-                interval: 3000 // Change the speed here
+                interval: 2000 // Change the speed here
             });
         });
     </script>
