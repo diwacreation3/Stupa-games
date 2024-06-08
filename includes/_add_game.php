@@ -60,7 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $imgType = pathinfo($targetImgPath, PATHINFO_EXTENSION);
 
-        $Img_allowTypes = array('jpg', 'png', 'jpeg');
+        $Img_allowTypes = array('jpg', 'png', 'jpeg', 'jfif', 'webp');
         $img_check = in_array($imgType, $Img_allowTypes);
         if($img_check)
         {
