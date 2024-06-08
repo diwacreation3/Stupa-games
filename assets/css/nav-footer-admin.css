@@ -1,5 +1,5 @@
 body {
-    background-color: #f8f9fa;
+    background-color: #f0f4f8;
 }
 
 .profile-card {
@@ -28,14 +28,16 @@ body {
     color: #777;
 }
 
-.reset-button {
-    border-radius: 8px;
-    background-color: #007bff;
+.btn-warning{
     color: white;
 }
-
-.reset-button:hover {
-    background-color: #0056b3;
+button a{
+    color: white;
+    text-decoration: none;
+}
+.btn-warning:hover{
+    color: white;
+    font-weight: 600;
 }
 
 .game-image {
@@ -80,7 +82,7 @@ body {
 }
 
 .footer a {
-    color: #ffc107;
+    color: #4CAF50;
     text-decoration: none;
 }
 

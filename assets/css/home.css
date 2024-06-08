@@ -1,5 +1,5 @@
 body {
-    background-color: #f8f9fa;
+    background-color: #f0f4f8;
 }
 
 .navbar-brand {
@@ -10,9 +10,6 @@ body {
     padding-inline: 16px;
     
 }
-.row{
-    margin-top: 20px;
-}
 
 .carousel-inner{
     backdrop-filter: blur(16px);
@@ -21,10 +18,10 @@ body {
 }
 @keyframes shadow-pulse {
     0% {
-        box-shadow: 0 0 10px rgba(22, 0, 187, 0.434);
+        box-shadow: 5px 0 10px rgba(24, 2, 185, 0.434);
     }
     100% {
-        box-shadow: 0 0 20px rgba(166, 8, 210, 0.564);
+        box-shadow: 0 8px 20px rgba(210, 8, 207, 0.485);
     }
 }
 .carousel-item {
@@ -40,8 +37,9 @@ body {
 }
 
 .carousel-caption {
-    bottom: 20px;
-    left: 20px;
+    justify-content: center;
+    bottom: 30px;
+    left: 160px;
     text-align: left;
     background: rgba(90, 132, 255, 0.09);
     border-radius: 16px;
@@ -53,17 +51,14 @@ body {
     border-radius: 13px;
 }
 
-.carousel-caption h2 {
+.carousel-caption h2  {
     margin: 0;
     font-weight: 700;
 }
 .carousel-caption p{
-    padding: 10px;
+    margin: 0;
 }
 
-.carousel-caption .play-now-btn {
-    margin-top: 10px;
-}
 
 /* .sidebar {
     position: absolute;

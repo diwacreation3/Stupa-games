@@ -72,7 +72,7 @@ require "../pages/widgets/header.php";
 
                 </div>
                 <input type="hidden" name="current_user" value="<?php echo $username ?>">
-                <button type="submit" class="btn btn-primary">Upload Game</button>
+                <button type="submit" class="btn btn-primary">Upload Game <i class="bi bi-cloud-upload-fill"></i></button>
              
             </form>
         </div>

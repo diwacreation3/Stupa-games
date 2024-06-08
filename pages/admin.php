@@ -43,7 +43,7 @@ require "../includes/_admin_user.php";
                         <h5><?php echo $row['username'] ?></h5>
                         <p><?php echo "Email: ", $row['email'] ?></p>
                         <p> <?php echo "Account created on: ", $row['created_on'] ?> </p>
-                        <button class="btn reset-button">Reset Password</button>
+                        <button class="btn btn-warning"><a href="password-reset.php">Reset Password</a></button>
                     </div>
         <?php
             }
