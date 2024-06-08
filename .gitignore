@@ -5,7 +5,6 @@ static/
 # ignore file inside assets
 
 #ignore
-sql/
 tests/
 data/
 
