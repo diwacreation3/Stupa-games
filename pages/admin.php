@@ -42,7 +42,7 @@ $username = $_SESSION["username"];
    <div class="container mt-5 d-flex flex-column align-items-center">
         <!-- Profile Card -->
         <div class="col-md-6 profile-card">
-            <img src="imgs/img (5).jpg" alt="Profile Image">
+            <!-- <img src="imgs/img (5).jpg" alt="Profile Image"> -->
             <h5><?php echo $row['username'] ?></h5>
             <p><?php echo "Email: ", $row['email'] ?></p>
             <p> <?php echo "Account created on: ", $row['created_on'] ?> </p>
@@ -53,6 +53,8 @@ $username = $_SESSION["username"];
         }}
      ?>   
         <h2 class="my-5">Hi, <b><?php echo ($_SESSION["username"]); ?></b>.  </h2>
+        
+   </div>    
    
    <?php  
     // calls the directory manager code if the directory dosen't exist on session user 

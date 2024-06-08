@@ -4,7 +4,8 @@ $manage_games = "manage_games.php";
 $view_user = "view_user.php";
 $add_game = "add_game.php";
 
-$logo_path = "../assets/logo.png";
+$logo_path = "../assets/brand-logo.png"; //with background
+$logo_path_nbg = "../assets/brand-logo-bg.png"; // without background
 
 // directory related path 
 
